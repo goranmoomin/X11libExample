@@ -1,0 +1,24 @@
+TOY = ${HOME}/Documents/Workspace/Toy
+NRC = ${TOY}/NRC
+
+CC = c++
+CFLAGS = -I. -I.. -I${Toy} -I${NRC} -IX11 -Wall
+
+#LIBS = ${TOY}/libtoy.a -lm
+LIBS = -lm
+XLIBS = ${TOY}/libtoy.a -lm /opt/X11/lib/libX11.dylib
+
+exam1 : exam1.cpp
+	${CC} -o $@ $@.cpp ${CFLAGS} ${XLIBS}
+exam2 : exam2.cpp
+	${CC} -o $@ $@.cpp ${CFLAGS} ${XLIBS}
+exam3 : exam3.cpp
+	${CC} -o $@ $@.cpp ${CFLAGS} ${XLIBS}
+exam4 : exam4.cpp
+	${CC} -o $@ $@.cpp ${CFLAGS} ${XLIBS}
+exam5 : exam5.cpp
+	${CC} -o $@ $@.cpp ${CFLAGS} ${XLIBS}
+exam6 : exam6.cpp
+	${CC} -o $@ $@.cpp ${CFLAGS} ${XLIBS}
+matrix : matrix.c
+	${CC} -o $@ $@.cpp ${CFLAGS} ${LIBS}

@@ -1,0 +1,8 @@
+find_package(X11 REQUIRED)
+include_directories(../Toy)
+include_directories(${X11_INCLUDE_DIR})
+foreach(NUM RANGE 1 5)
+  add_executable(exam${NUM}.o exam${NUM}.cpp)
+  target_link_libraries(exam${NUM}.o ${CMAKE_SOURCE_DIR}/../Toy/libToy.a)
+  target_link_libraries(exam${NUM}.o ${X11_LIBRARIES})
+endforeach()
